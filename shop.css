@@ -1,0 +1,393 @@
+ body {
+     font-family: 'Poppins', sans-serif;
+     color: #333;
+     background: #fff;
+     overflow-x: hidden;
+     border-radius: 3rem;
+
+ }
+
+ /* HEADER */
+ header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px 8%;
+     background: #dfd7d7;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+     position: sticky;
+     top: 0;
+     z-index: 100;
+     border-radius: 1.6rem;
+ }
+
+ .logo {
+     font-size: 1.5rem;
+     font-weight: 300;
+     color: #f54291;
+ }
+
+ .logo span {
+     color: #000;
+ }
+
+ nav ul {
+     display: flex;
+     gap: 25px;
+     list-style: none;
+ }
+
+ nav ul li a {
+     text-decoration: none;
+     color: #333;
+     font-weight: 500;
+     transition: color 0.3s;
+ }
+
+ nav ul li a:hover {
+     color: #f54291;
+ }
+
+ .socials a img {
+     width: 20px;
+     margin-right: 5px;
+ }
+
+
+ * HERO SECTION */ .hero {
+     display: flex;
+     content: center;
+     align-items: center;
+     justify-content: space-between;
+     padding: 80px 10%;
+     min-height: 90vh;
+     background: linear-gradient(120deg, #fff 60%, #ffe0ed);
+ }
+
+ .hero-text {
+     flex: 1;
+ }
+
+ .hero-text h1 {
+     font-size: 3.2rem;
+     color: #f54291;
+     margin-bottom: 20px;
+ }
+
+ .hero-text p {
+     font-size: 1.2rem;
+     color: #555;
+     margin-bottom: 30px;
+ }
+
+ .hero-image img {
+     width: 500px;
+     border-radius: 20px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+ }
+
+ .btn {
+     background: #f54291;
+     color: #fff;
+     border: none;
+     padding: 12px 25px;
+     border-radius: 30px;
+     cursor: pointer;
+     transition: 0.3s;
+ }
+
+ .btn:hover {
+     background: #d43178;
+ }
+
+ .small {
+     padding: 8px 18px;
+ }
+
+ /* HOW IT WORKS */
+ .how-it-works {
+     text-align: center;
+     padding: 80px 10%;
+ }
+
+ .how-it-works h2 {
+     font-size: 2.2rem;
+     margin-bottom: 40px;
+     color: #f54291;
+ }
+
+ .steps {
+     display: flex;
+     justify-content: center;
+     gap: 40px;
+     flex-wrap: wrap;
+ }
+
+ .step {
+     width: 280px;
+     background: #f9f9f9;
+     border-radius: 15px;
+     padding: 25px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+     transition: 0.3s;
+ }
+
+ .step:hover {
+     transform: translateY(-10px);
+ }
+
+ .step img {
+     width: 10rem;
+     margin-bottom: 75px;
+ }
+
+
+
+
+ .gallery-section {
+     padding: 50px 10%;
+     text-align: center;
+ }
+
+ .gallery-title {
+     font-size: 2.5em;
+     margin-bottom: 30px;
+     color: #111;
+     font-weight: 700;
+ }
+
+ .gallery {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 25px;
+ }
+
+ .product {
+     position: relative;
+     overflow: hidden;
+     border-radius: 15px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     cursor: pointer;
+     transition: transform 0.3s ease;
+ }
+
+ .product:hover {
+     transform: scale(1.05);
+ }
+
+ .product img {
+     width: 100%;
+     height: 350px;
+     object-fit: cover;
+     border-radius: 15px;
+     transition: all 0.3s ease;
+ }
+
+ .overlay {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     background: rgba(0, 0, 0, 0.6);
+     color: #fff;
+     text-align: center;
+     padding: 15px;
+     opacity: 0;
+     transition: opacity 0.4s;
+ }
+
+ .product:hover .overlay {
+     opacity: 1;
+ }
+
+ .buy-btn {
+     background-color: #ff007b;
+     border: none;
+     color: #fff;
+     padding: 10px 25px;
+     border-radius: 25px;
+     cursor: pointer;
+     font-weight: bold;
+     margin-top: 10px;
+     transition: background 0.3s;
+ }
+
+ .buy-btn:hover {
+     background-color: #e6006f;
+ }
+
+ /* Popup Styles */
+ .popup {
+     display: none;
+     position: fixed;
+     z-index: 10;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.7);
+     justify-content: center;
+     align-items: center;
+ }
+
+ .popup-content {
+     background: #fff;
+     padding: 25px;
+     border-radius: 15px;
+     text-align: center;
+     width: 350px;
+     animation: pop 0.4s ease;
+ }
+
+ .popup-content img {
+     width: 100%;
+     border-radius: 15px;
+ }
+
+ .popup-content h3 {
+     margin-top: 15px;
+     font-size: 1.5em;
+ }
+
+ .popup-content p {
+     color: #555;
+     font-weight: bold;
+     margin: 10px 0;
+ }
+
+ .close {
+     position: absolute;
+     top: 20px;
+     right: 30px;
+     font-size: 30px;
+     color: #fff;
+     cursor: pointer;
+ }
+
+ @keyframes pop {
+     from {
+         transform: scale(0.5);
+         opacity: 0;
+     }
+
+     to {
+         transform: scale(1);
+         opacity: 1;
+     }
+ }
+
+
+
+
+
+
+
+
+
+
+ /* FEATURED PRODUCT */
+ .featured {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 100px 10%;
+     background: #fff;
+ }
+
+ .featured .text {
+     flex: 1;
+ }
+
+ .featured .image img {
+     width: 450px;
+     border-radius: 20px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+ }
+
+ /* REVIEWS */
+ .reviews {
+     background: #fff5fa;
+     padding: 80px 10%;
+     text-align: center;
+ }
+
+ .reviews h2 {
+     font-size: 2rem;
+     margin-bottom: 40px;
+     color: #f54291;
+ }
+
+ .review-box {
+     display: flex;
+     gap: 30px;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+
+ .review {
+     background: #fff;
+     padding: 25px;
+     border-radius: 15px;
+     width: 300px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+ }
+
+ /* FOOTER */
+ footer {
+     background: #111;
+     color: #eee;
+     padding: 60px 10%;
+ }
+
+ .footer-content {
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     gap: 30px;
+     margin-bottom: 20px;
+ }
+
+ footer h3 {
+     color: #f54291;
+     margin-bottom: 10px;
+ }
+
+ footer ul {
+     list-style: none;
+ }
+
+ footer ul li a {
+     color: #ccc;
+     text-decoration: none;
+     transition: 0.3s;
+ }
+
+ footer ul li a:hover {
+     color: #fff;
+ }
+
+ footer input {
+     padding: 8px;
+     border: none;
+     border-radius: 5px;
+     margin-right: 5px;
+ }
+
+ .copy {
+     text-align: center;
+     font-size: 0.9rem;
+     color: #aaa;
+ }
+
+
+
+
+
+
+
+ .logo {
+     width: 60px;
+     /* adjust smaller or larger */
+     height: auto;
+     margin-right: 15px;
+ }
